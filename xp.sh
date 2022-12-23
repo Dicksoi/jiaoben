@@ -74,7 +74,8 @@ vps_wulabing1(){
 }
 
 vps_wulabing2(){
-    bash <(curl -fsSL https://git.io/hysteria.sh)
+     bash <(curl -fsSL https://git.io/hysteria.sh)
+}
 vps_bt1(){
    yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh
 }
@@ -94,7 +95,7 @@ vps_bbr1(){
    wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 }
 
-vps_Hi_Hysteria(){
+vps_bbr2(){
   wget -N --no-check-certificate "https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 }
 vps_nf(){
@@ -110,7 +111,7 @@ vps_suoha(){
   wget https://www.baipiao.eu.org/suoha.sh -O suoha.sh && bash suoha.sh
 }
 vps_root(){
-  wget https://raw.githubusercontents.com/Dicksoi/rootLogin/master/root.sh && bash root.sh
+  wget -N --no-check-certificate https://raw.githubusercontents.com/Dicksoi/rootLogin/master/root.sh && bash root.sh
 }
 vps_trojan(){
   wget https://raw.githubusercontent.com/wxfyes/trojan/master/Trojan.sh && bash Trojan.sh
@@ -137,7 +138,7 @@ vps_openvz(){
   wget --no-cache -O lkl-haproxy.sh https://github.com/mzz2017/lkl-haproxy/raw/master/lkl-haproxy.sh && bash lkl-haproxy.sh
 }
 vps_warp1(){
-  bash <(curl -sSL https://raw.githubusercontent.com/fscarmen/warp_unlock/main/unlock.sh)
+ wget -N --no-check-certificate https://raw.githubusercontent.com/Dicksoi/acme-1key/master/acme1key.sh && bash acme1key.sh
 }
 vps_jg(){
    bash <(curl -fsSL https://raw.githubusercontent.com/wxfyes/bt/master/installjg.sh)
@@ -175,7 +176,7 @@ start_menu(){
 	 yellow " 7. wulabing-v2ray一键安装脚本 "
 	 yellow " 8. Hi_Hysteria一键安装脚本 "
 	 yellow " 9. X-ui面板一键安装 "
-	 yellow " 10. Cloudflare argo一键梭哈脚本 "
+	 yellow " 10.suoha一键安装脚本 "
 	 yellow " 11. Trojan一键安装（atrandys版）"
 	green "===================宝塔面板官方脚本======================="
 	 yellow " 12. centos系统一键安装 "
@@ -191,14 +192,14 @@ start_menu(){
 	 yellow " 19. 启动Netflix检测脚本 "
 	 yellow " 20. 流媒体一键检测脚本 "
 	green "===== ====其他工具（KVM架构VPS通用）=========="
-	 yellow " 21. 甲骨文一键设置root密码 "
+	 yellow " 21. 一键设置root密码 "
 	 yellow " 22. frp内网穿透一键安装 "
 	 yellow " 23. NPS内网穿透一键安装 "
 	 yellow " 24. WARP 一键配置脚本 "
 	 yellow " 25. gost隧道一键中转 "
 	 yellow " 26. Ehco隧道一键中转 "
 	 yellow " 27. 查看本机IP "
-	 yellow " 28. fscarmen版 warp奈飞解锁脚本 "
+	 yellow " 28. 一键域名申请证书脚本 "
 	 yellow " 29. 极光转发面板 "
 	 yellow " 30. 咸蛋转发面板 "
 	 yellow " 31. 哪吒监控探针 "
@@ -258,7 +259,7 @@ start_menu(){
 		vps_bbr1
 		;;
 		17)
-		vps_Hi_Hysteria
+		vps_bbr2
 		;;
 		18)
 		vps_openvz
