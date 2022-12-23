@@ -124,7 +124,7 @@ vps_nps(){
   wget https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_amd64_server.tar.gz && tar -zxvf linux_amd64_server.tar.gz && sudo ./nps install && ./nps start
 }
 vps_warp(){
-  wget -N --no-check-certificate https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh && bash CFwarp.sh
+  wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
 }
 vps_gost(){
   wget --no-check-certificate -O gost.sh https://raw.githubusercontent.com/KANIKIG/Multi-EasyGost/master/gost.sh && chmod +x gost.sh && ./gost.sh
@@ -177,7 +177,7 @@ start_menu(){
 	 yellow " 7. wulabing-v2ray一键安装脚本 "
 	 yellow " 8. wulabing-xray一键安装脚本 "
 	 yellow " 9. X-ui面板一键安装 "
-	 yellow " 10. Cloudflare argo一键安装脚本 "
+	 yellow " 10. Cloudflare argo一键梭哈脚本 "
 	 yellow " 11. Trojan一键安装（atrandys版）"
 	green "===================宝塔面板官方脚本======================="
 	 yellow " 12. centos系统一键安装 "
