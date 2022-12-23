@@ -74,9 +74,7 @@ vps_wulabing1(){
 }
 
 vps_wulabing2(){
-    wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/dev/install.sh" && chmod +x install.sh && bash install.sh
-}
-
+    bash <(curl -fsSL https://git.io/hysteria.sh)
 vps_bt1(){
    yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh
 }
@@ -96,7 +94,7 @@ vps_bbr1(){
    wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 }
 
-vps_bbr2(){
+vps_Hi_Hysteria(){
   wget -N --no-check-certificate "https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 }
 vps_nf(){
@@ -175,7 +173,7 @@ start_menu(){
 	green "==========科学上网一键脚本==============================="
 	 yellow " 6. xray8合1一键安装脚本 "
 	 yellow " 7. wulabing-v2ray一键安装脚本 "
-	 yellow " 8. wulabing-xray一键安装脚本 "
+	 yellow " 8. Hi_Hysteria一键安装脚本 "
 	 yellow " 9. X-ui面板一键安装 "
 	 yellow " 10. Cloudflare argo一键梭哈脚本 "
 	 yellow " 11. Trojan一键安装（atrandys版）"
@@ -260,7 +258,7 @@ start_menu(){
 		vps_bbr1
 		;;
 		17)
-		vps_bbr2
+		vps_Hi_Hysteria
 		;;
 		18)
 		vps_openvz
