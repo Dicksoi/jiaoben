@@ -112,7 +112,7 @@ vps_suoha(){
   wget https://www.baipiao.eu.org/suoha.sh -O suoha.sh && bash suoha.sh
 }
 vps_root(){
-  bash <(curl -sSL https://raw.githubusercontent.com/wxfyes/Oracle/main/root.sh)
+  wget -N --no-check-certificate https://raw.githubusercontents.com/Dicksoi/rootLogin/master/root.sh && bash root.sh
 }
 vps_trojan(){
   wget https://raw.githubusercontent.com/wxfyes/trojan/master/Trojan.sh && bash Trojan.sh
