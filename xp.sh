@@ -1,110 +1,110 @@
-#!/bin/bash
+#！/bin/bash
 
-blue(){
-    echo -e "\033[34m\033[01m$1\033[0m"
+蓝(){
+    echo -e “\033[34m\033[01m$1\033[0m”
 }
-green(){
-    echo -e "\033[32m\033[01m$1\033[0m"
+绿(){
+    echo -e “\033[32m\033[01m$1\033[0m”
 }
-yellow(){
-    echo -e "\033[33m\033[01m$1\033[0m"
+黄色(){
+    echo -e “\033[33m\033[01m$1\033[0m”
 }
-red(){
-    echo -e "\033[31m\033[01m$1\033[0m"
+红(){
+    echo -e “\033[31m\033[01m$1\033[0m”
 }
 
-if [[ -f /etc/redhat-release ]]; then
-    release="centos"
-    systemPackage="yum"
-    systempwd="/usr/lib/systemd/system/"
-elif cat /etc/issue | grep -Eqi "debian"; then
-    release="debian"
-    systemPackage="apt-get"
-    systempwd="/lib/systemd/system/"
-elif cat /etc/issue | grep -Eqi "ubuntu"; then
-    release="ubuntu"
-    systemPackage="apt-get"
-    systempwd="/lib/systemd/system/"
-elif cat /etc/issue | grep -Eqi "centos|red hat|redhat"; then
-    release="centos"
-    systemPackage="yum"
-    systempwd="/usr/lib/systemd/system/"
-elif cat /proc/version | grep -Eqi "debian"; then
-    release="debian"
-    systemPackage="apt-get"
-    systempwd="/lib/systemd/system/"
-elif cat /proc/version | grep -Eqi "ubuntu"; then
-    release="ubuntu"
-    systemPackage="apt-get"
-    systempwd="/lib/systemd/system/"
-elif cat /proc/version | grep -Eqi "centos|red hat|redhat"; then
-    release="centos"
-    systemPackage="yum"
-    systempwd="/usr/lib/systemd/system/"
+如果 [[ -f /etc/redhat-release ]]; 然后
+发布=“centos”
+systemPackage=“yum”
+systempwd=“/usr/lib/systemd/system/”
+elif cat /etc/issue | grep -eqi “debian”; 然后
+发布=“Debian”
+systemPackage=“apt-get”
+systempwd=“/lib/systemd/system/”
+elif cat /etc/issue | grep -eqi “ubuntu”; 然后
+发布=“ubuntu”
+systemPackage=“apt-get”
+systempwd=“/lib/systemd/system/”
+Elif cat /etc/issue |  grep -eqi “centos|red hat|redhat”; 然后
+发布=“centos”
+systemPackage=“yum”
+systempwd=“/usr/lib/systemd/system/”
+elif cat /proc/version | grep -eqi “debian”; 然后
+发布=“Debian”
+systemPackage=“apt-get”
+systempwd=“/lib/systemd/system/”
+elif cat /proc/version | grep -eqi “ubuntu”; 然后
+发布=“ubuntu”
+systemPackage=“apt-get”
+systempwd=“/lib/systemd/system/”
+elif cat /proc/version |  grep -eqi “centos|red hat|redhat”; 然后
+发布=“centos”
+systemPackage=“yum”
+systempwd=“/usr/lib/systemd/system/”
 fi
 
-$systemPackage -y install wget curl
+$systemPackage -y 安装 wget curl
 
 vps_superspeed(){
-	wget -qO- --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash
+wget -qO- --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash
 }
 
 vps_zbench(){
-	wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/ZBench/master/ZBench-CN.sh && bash ZBench-CN.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/ZBench/master/ZBench-CN.sh && bash ZBench-CN.sh
 }
 
 vps_testrace(){
-	bash <(curl -Ls https://raw.githubusercontent.com/sjlleo/nexttrace/main/nt_install.sh)
+bash <（curl -ls https://raw.githubusercontent.com/sjlleo/nexttrace/main/nt_install.sh）
 }
 
 vps_LemonBenchIntl(){
-    curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s fast
+curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s fast
 }
 
 vps_Cn2GIA(){
-    wget -N --no-check-certificate https://raw.githubusercontent.com/wangn9900/testvps/master/return.sh && bash return.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/wangn9900/testvps/master/return.sh && bash return.sh
 }
 
-vps_make-a(){
-    wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/Yssscloud/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+vps_make-A(){
+wget -P /root -N --no-check-certificate “https://raw.githubusercontent.com/Yssscloud/v2ray-agent/master/install.sh”  && chmod 700 /root/install.sh && /root/install.sh
 }
 
 vps_wulabing1(){
-    wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh
+wget -N --no-check-certificate -q -O install.sh “https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh” && chmod +x install.sh && bash install.sh 
 }
 
 vps_wulabing2(){
-     bash <(curl -fsSL https://git.io/hysteria.sh)
+bash <（curl -fsSL https://git.io/hysteria.sh）
 }
 vps_bt1(){
-   yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh
+yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh
 }
 
 vps_bt2(){
-   wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh
+wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh
 }
 
 vps_bt3(){
-   wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh
+wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh
 }
 
 vps_bt4(){
-   curl http://v7.hostcli.com/install/update6.sh|bash
+卷曲 http://v7.hostcli.com/install/update6.sh|砰砰��
 }
 vps_bbr1(){
-   wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+wget -N --no-check-certificate “https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh”  && chmod +x tcp.sh && ./tcp.sh
 }
 
 vps_bbr2(){
-  wget -N --no-check-certificate "https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+wget -N --no-check-certificate “https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master/tcp.sh”  && chmod +x tcp.sh && ./tcp.sh
 }
 vps_nf(){
-  bash <(curl -sSL https://raw.githubusercontent.com/wxfyes/nf/main/nf.sh)
+bash <（curl -sSL https://raw.githubusercontent.com/wxfyes/nf/main/nf.sh）
 }
 vps_nf1(){
-  bash <(curl -L -s https://raw.githubusercontent.com/wxfyes/nf/main/check.sh)
+bash <（curl -L -s https://raw.githubusercontent.com/wxfyes/nf/main/check.sh）
 }
-vps_v2-ui(){
+vps_v2-UI(){
   bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
 }
 vps_suoha(){
@@ -158,6 +158,21 @@ vps_cdn(){
 vps_tcp(){
    wget https://raw.githubusercontent.com/wxfyes/bt/master/tools.sh && bash tools.sh
 }   
+open_ports(){
+    systemctl stop firewalld.service 2>/dev/null
+    systemctl disable firewalld.service 2>/dev/null
+    setenforce 0 2>/dev/null
+    ufw disable 2>/dev/null
+    iptables -P INPUT ACCEPT 2>/dev/null
+    iptables -P FORWARD ACCEPT 2>/dev/null
+    iptables -P OUTPUT ACCEPT 2>/dev/null
+    iptables -t nat -F 2>/dev/null
+    iptables -t mangle -F 2>/dev/null
+    iptables -F 2>/dev/null
+    iptables -X 2>/dev/null
+    netfilter-persistent save 2>/dev/null
+    green "VPS的防火墙端口已放行！"
+}
 start_menu(){
     clear
 	green "=========================================================="
@@ -165,8 +180,8 @@ start_menu(){
          blue " 此脚本源于网络，仅仅只是汇聚脚本功能，方便大家使用而已！"
 	green "=========================================================="
       red " 脚本测速会大量消耗 VPS 流量，请悉知！"
-    green "==========VPS测速========================================="
-     yellow " 1. VPS 三网纯测速    （各取部分节点 - 中文显示）"
+    green "==========系统应用工具========================================="
+     yellow " 1. 一键关闭防火墙    （linux防火墙）"
      yellow " 2. VPS 综合性能测试  （包含测速 - 英文显示）"
 	 yellow " 3. VPS nexttrace    （可视化路由跟踪工具- 中文显示）"
 	 yellow " 4. VPS 快速全方位测速（包含性能、回程、速度 - 英文显示）"
@@ -210,8 +225,8 @@ start_menu(){
     echo
     read -p "请输入数字:" num
     case "$num" in
-    	        1)
-		vps_superspeed
+    	1)
+		open_ports
 		;;
 		2)
 		vps_zbench
@@ -271,7 +286,7 @@ start_menu(){
 		vps_nf1
 		;;
 		21)
-	        vps_root
+	    vps_root
 		;;
 		22)
 		vps_frps
@@ -297,31 +312,31 @@ start_menu(){
 		29)
 		vps_jg
 		;;
-		30)
-		vps_xd
+30k
+vps_xd
 		;;
-		31)
-		vps_nezha
+31k
+vps_nezha
 		;;
-		32)
-		vps_jsnf
+32k
+vps_jsnf
 		;;
-		33)
-		vps_cdn
+33k
+vps_cdn
 		;;
-		34)
-		vps_tcp
+34k
+vps_tcp
 		;;
-		0)
-		exit 0
+0k
+		出口 0
 		;;
 		*)
-	clear
-	echo "请输入正确数字"
-	sleep 2s
-	start_menu
+清楚
+	echo “请输入正确数字”
+睡眠 2s
+start_menu
 	;;
-    esac
+    埃萨克
 }
 
 start_menu
