@@ -114,7 +114,8 @@ vps_root(){
   wget -N --no-check-certificate https://raw.githubusercontents.com/Dicksoi/rootLogin/master/root.sh && bash root.sh
 }
 vps_trojan(){
-  wget https://raw.githubusercontent.com/wxfyes/trojan/master/Trojan.sh && bash Trojan.sh
+  wget -N --no-check-certificate https://gitlab.com/Misaka-blog/tuic-script/-/raw/main/tuic.sh && bash tuic.sh
+
 }
 vps_frps(){
   wget https://raw.githubusercontent.com/MvsCode/frps-onekey/master/install-frps.sh -O ./install-frps.sh && chmod 700 ./install-frps.sh && ./install-frps.sh install
@@ -246,7 +247,7 @@ start_menu(){
 	 yellow " 8. Hi_Hysteria一键安装脚本 "
 	 yellow " 9. X-ui面板一键安装 "
 	 yellow " 10.suoha一键安装脚本 "
-	 yellow " 11. Trojan一键安装（atrandys版）"
+	 yellow " 11. tuic一键安装脚本"
 	green "===================宝塔面板官方脚本======================="
 	 yellow " 12. centos系统一键安装 "
 	 yellow " 13. debian系统一键安装 "
