@@ -114,7 +114,7 @@ vps_root(){
 wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/root-login/main/root.sh && bash root.sh
 }
 vps_trojan(){
-  wget -N --no-check-certificate https://gitlab.com/Misaka-blog/tuic-script/-/raw/main/tuic.sh && bash tuic.sh
+  wget --no-check-certificate https://gitlab.com/Misaka-blog/tuic-script/-/raw/main/tuic_old.sh -O tuic.sh && bash tuic.sh
 
 }
 vps_frps(){
