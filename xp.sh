@@ -124,7 +124,7 @@ vps_nps(){
   wget https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_amd64_server.tar.gz && tar -zxvf linux_amd64_server.tar.gz && sudo ./nps install && ./nps start
 }
 vps_warp(){
-  wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh [option] [lisence/url/token]
+  wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh
 }
 vps_gost(){
   wget --no-check-certificate -O gost.sh https://raw.githubusercontent.com/KANIKIG/Multi-EasyGost/master/gost.sh && chmod +x gost.sh && ./gost.sh
