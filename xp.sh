@@ -74,7 +74,7 @@ vps_wulabing1(){
 }
 
 vps_wulabing2(){
-     bash <(curl -fsSL https://git.io/hysteria.sh)
+     wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh && bash hysteria.sh
 }
 vps_bt1(){
    yum install -y wget && wget -O install.sh https://download.bt.cn/install/install_6.0.sh && sh install.sh ed8484bec
